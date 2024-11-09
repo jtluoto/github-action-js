@@ -38,5 +38,9 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers-contrib/features/prettier:1": {}
-  }
+  },
+  "mounts": [
+    "type=bind,source=${localWorkspaceFolder},target=/work",
+    "type=bind,source=/Users/${localEnv:USER}/.ssh,target=/root/.ssh,readonly"
+  ]
 }

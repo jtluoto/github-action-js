@@ -17,12 +17,12 @@ async function run() {
     await wait(parseInt(ms, 10))
     core.debug(new Date().toTimeString())
 
-    // Set outputs for other workflow steps to use
-    core.setOutput('time', new Date().toTimeString())
-
     const favColor = core.getInput('favourite-color', { required: true })
     core.debug(`favColor is  ${favColor}`)
     core.setOutput('favColor', `The fav color is ${favColor}!`)
+
+    // Set outputs for other workflow steps to use
+    core.setOutput('time', new Date().toTimeString())
   } catch (error) {
     // Fail the workflow run if an error occurs
     core.setFailed(error.message)

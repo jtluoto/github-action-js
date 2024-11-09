@@ -2,6 +2,7 @@
   "name": "GitHub Actions (JavaScript)",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "postCreateCommand": "npm install",
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "customizations": {
     "codespaces": {
       "openFiles": ["README.md"]

@@ -3450,6 +3450,10 @@ async function run() {
     await wait(parseInt(ms, 10))
     core.debug(new Date().toTimeString())
 
+    const favColor = core.getInput('favourite-color', { required: true })
+    core.debug(`color is  ${favColor}`)
+    core.setOutput('color', `The fav color is ${favColor}!`)
+
     // Set outputs for other workflow steps to use
     core.setOutput('time', new Date().toTimeString())
   } catch (error) {

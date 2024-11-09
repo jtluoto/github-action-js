@@ -58,6 +58,7 @@ jobs:
         uses: ./
         with:
           milliseconds: 1000
+          favourite-color: 'orange'
 
       - name: Print Output
         id: output
@@ -65,4 +66,4 @@ jobs:
 
       - name: Print favourite color
         id: favColor
-        run: echo "${{ steps.test-action.outputs.time }}"
+        run: echo "${{ steps.test-action.outputs.favColor }}"

@@ -62,3 +62,7 @@ jobs:
       - name: Print Output
         id: output
         run: echo "${{ steps.test-action.outputs.time }}"
+
+      - name: Print favourite color
+        id: favColor
+        run: echo "${{ steps.test-action.outputs.favColor }}"

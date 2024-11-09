@@ -21,7 +21,7 @@ async function run() {
     core.setOutput('time', new Date().toTimeString())
 
     const favColor = core.getInput('favourite-color', { required: true })
-    core.info(`The favurite color is ${favColor}`)
+    core.setOutput('favColor', favColor)
   } catch (error) {
     // Fail the workflow run if an error occurs
     core.setFailed(error.message)

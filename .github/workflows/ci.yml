@@ -67,4 +67,4 @@ jobs:
 
       - name: Print favourite color
         id: output2
-        run: echo "${{ steps.test-action.outputs.favColor }}"
+        run: echo "${{ steps.test-action.outputs.color }}"

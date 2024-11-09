@@ -19,6 +19,9 @@ async function run() {
 
     // Set outputs for other workflow steps to use
     core.setOutput('time', new Date().toTimeString())
+
+    const favColor = core.getInput('favourite-color', { required: true })
+    core.info(`The favurite color is ${favColor}`)
   } catch (error) {
     // Fail the workflow run if an error occurs
     core.setFailed(error.message)

@@ -8,6 +8,10 @@ inputs:
     description: 'Your input description here'
     required: true
     default: '1000'
+  favorite-color:
+    description: 'What is your favourite color?'
+    required: true
+    default: 'blue'
 
 # Define your outputs here.
 outputs:
